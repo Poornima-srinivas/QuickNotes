@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_white"
+    tools:context=".fragments.UpdateNoteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title EditText -->
+        <EditText
+            android:id="@+id/etNoteTitleUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:hint="Title"
+            android:textAllCaps="true"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textStyle="bold" />
+
+        <!-- Body EditText -->
+        <EditText
+            android:id="@+id/etNoteBodyUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:hint="Note body"
+            android:scrollbars="vertical"
+            android:textColorHint="@color/grey"
+            android:inputType="textMultiLine"
+            android:gravity="top" />
+
+        <!-- ImageView for displaying selected image -->
+        <ImageView
+            android:id="@+id/ivNoteImageUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:contentDescription="Note Image" />
+
+        <!-- Button to pick image -->
+        <Button
+            android:id="@+id/btnPickImageUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#49243E"
+            android:text="update Image" />
+
+        <!-- Floating Action Button for Done -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDone"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:backgroundTint="#49243E"
+            android:tintMode="@color/white"
+            android:src="@drawable/ic_done"
+            app:borderWidth="0dp"
+            app:srcCompat="@drawable/ic_done" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
